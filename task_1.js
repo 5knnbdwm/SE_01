@@ -7,7 +7,7 @@ let code = "";
 for (let i = 0; i < size; i++) {
   code += Math.floor(Math.random() * (7 - 0 + 1)) + 0;
 }
-console.log(code);
+// console.log(code);
 
 function checkCode(code, input) {
   let rC = 0;
@@ -45,8 +45,8 @@ function askUser() {
 
 console.log(
   "Welcome to Mastermind. \nI have already choose a number so we can start right away. \nThe length of the code is: " +
-    size +
-    "\n"
+  size +
+  "\n"
 );
 
 async function main(code, rounds) {
@@ -58,9 +58,9 @@ async function main(code, rounds) {
     } else {
       console.log(
         result[0] +
-          " of you guesses have the right color\n" +
-          result[1] +
-          " of your guesses are in the right spot and have the right color"
+        " of you guesses have the right color\n" +
+        result[1] +
+        " of your guesses are in the right spot and have the right color"
       );
       rounds--;
       main(code, rounds);
@@ -68,7 +68,7 @@ async function main(code, rounds) {
   } else {
     console.log(
       "The game is over, as you run out of rounds. The code I created was: " +
-        code
+      code
     );
   }
 }
